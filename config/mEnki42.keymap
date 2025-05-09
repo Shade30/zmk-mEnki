@@ -14,9 +14,29 @@
 #define LWR 1
 #define RSE 2
 #define ADJ 3
+/*
 
-&lt { quick_tap_ms = <220>; };
-&mt { quick_tap_ms = <220>; };
+
+#define ADJ 3
+
+/*
+* &lt { quick_tap_ms = <220>; };
+* &mt { quick_tap_ms = <220>; };
+ */
+
+&lt {
+    quick_tap_ms = <220>;
+    require-prior-idle-ms = <150>;
+    flavor = "balanced";
+    tapping-term-ms = <280>;
+};
+
+&mt {
+    quick_tap_ms = <220>;
+    tapping-term-ms = <280>;
+    require-prior-idle-ms = <150>;
+    flavor = "balanced";
+};
 
 / {
     macros {
